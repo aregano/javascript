@@ -40,7 +40,7 @@ var numero2 = []
 
 var op = ['+','-','*','/']
 
-var arr = [2,4,7,8]
+var arr = []
 
 function operarNumeros(numero1, numero2, op){
     if(op=='+'){return numero1+numero2;}
@@ -51,14 +51,72 @@ function operarNumeros(numero1, numero2, op){
     
 }
 
-console.log( operarNumeros(4,2,'+'))
-console.log( operarNumeros(4,2,'-'))
-console.log( operarNumeros(4,2,'*'))
-console.log( operarNumeros(4,2,'/'))
+operarNumeros(4,2,'+');
+// console.log( operarNumeros(4,2,'-'))
+// console.log( operarNumeros(4,2,'*'))
+// console.log( operarNumeros(4,2,'/'))
 
-function operarNumArray(arr, op){
-    {for (let index = 0; index < arr.length; index++) {
-        if(op=='+'){return arr}
-    }
 
+
+// como hacer operaciones con un array
+
+var resultado = 0
+
+var arr = []
+
+// function operarNumArray(arr, op){
+//     if(op=='+'){resultado = arr[0]; for (let index = 1; index < arr.length; index++) 
+//         // {resultado = resultado + arr[index]}
+//         {resultado += arr[index]}
+//     }
+//     else if(op=='-'){resultado = arr[0]; for (let index = 1; index < arr.length; index++)
+//         //  {resultado = resultado - arr[index]}
+//          {resultado -= arr[index]}
+//         }
+//     else if(op=='*'){resultado = arr[0]; for (let index = 1; index < arr.length; index++)
+//         //  {resultado = resultado * arr[index]}
+//          {resultado *= arr[index]}
+//         }
+//     else if(op=='/'){resultado = arr[0]; for (let index = 1; index < arr.length; index++) 
+//         {if (arr[index] == 0) {resultado = 0;}
+//         //  {resultado = resultado / arr[index]}
+//         else {resultado /= arr[index]}
+//         }
+//     }
+    
+//     return resultado;
+// }
+
+// console.log(operarNumArray([1,1,1,1,2], '+'));
+// console.log(operarNumArray([1,1,1,1,2], '-'));
+// console.log(operarNumArray([1,1,1,1,2], '*'));
+// console.log(operarNumArray([1,1,1,1,2], '/'));
+
+
+ 
+
+// function operarNumArray(arr, op){
+//     if(op=='+'){resultado = arr[0]; for (let index = 1; index < arr.length; index++) 
+//         {resultado =  operarNumeros(resultado, arr[index], '+')}
+//         // {resultado +=  arr[index]}
+//     }
+//     else if(op=='-'){resultado = arr[0]; for (let index = 1; index < arr.length; index++)
+//         //  {resultado = resultado - arr[index]}
+//          {resultado -= arr[index]}
+//         }
+//     else if(op=='*'){resultado = arr[0]; for (let index = 1; index < arr.length; index++)
+//         //  {resultado = resultado * arr[index]}
+//          {resultado *= arr[index]}
+//         }
+//     else if(op=='/'){resultado = arr[0]; for (let index = 1; index < arr.length; index++) 
+//         {if (arr[index] == 0) {resultado = 0;}
+//         //  {resultado = resultado / arr[index]}
+//         else {resultado /= arr[index]}
+//         }
+//     }
+    
+//     return resultado;
+// }
+
+// console.log(operarNumArray([1,1,1,1], '+'));
 
