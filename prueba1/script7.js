@@ -102,3 +102,4 @@ let clase3 = [
 for (let index = 0; index < clase3.length; index++) {
     console.log( clase3[index].showInfo() );
 }
+

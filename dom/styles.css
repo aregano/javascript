@@ -1,0 +1,17 @@
+body > header{text-align: center;
+    font-family: Verdana;
+}
+
+body > div{width: 30%; 
+    padding: 0 auto;
+    margin-right: 50px;
+    display: inline-block;
+
+}
+
+body > p{width: 40%;
+    padding: 0 auto;
+    margin-left: 40px;
+    display: inline-block;
+
+}
