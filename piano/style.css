@@ -1,0 +1,21 @@
+body{background: wheat;
+    display: inline-block;
+    margin: 25% 10%;}
+
+div{background: black;
+    width: 100%; height: 200px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: inline-block;}
+
+.true{background: white;
+    border: 1px solid black;
+    }
+
+.false{width: 35px; height: 140px;
+    background: black;
+    position: absolute;
+    margin-left:-20px}
+
+
+div > span > div{width: 50px; height: 200px;}
