@@ -51,7 +51,7 @@ function operarNumeros(numero1, numero2, op){
     
 }
 
-operarNumeros(4,2,'+');
+// operarNumeros(4,2,'+');
 // console.log( operarNumeros(4,2,'-'))
 // console.log( operarNumeros(4,2,'*'))
 // console.log( operarNumeros(4,2,'/'))
@@ -87,36 +87,73 @@ var arr = []
 //     return resultado;
 // }
 
-// console.log(operarNumArray([1,1,1,1,2], '+'));
-// console.log(operarNumArray([1,1,1,1,2], '-'));
-// console.log(operarNumArray([1,1,1,1,2], '*'));
-// console.log(operarNumArray([1,1,1,1,2], '/'));
 
 
  
 
 // function operarNumArray(arr, op){
-//     if(op=='+'){resultado = arr[0]; for (let index = 1; index < arr.length; index++) 
-//         {resultado =  operarNumeros(resultado, arr[index], '+')}
+//     if(op=='+'){resultado = arr[0];  
+        
 //         // {resultado +=  arr[index]}
 //     }
-//     else if(op=='-'){resultado = arr[0]; for (let index = 1; index < arr.length; index++)
+//     else if(op=='-'){resultado = arr && arr[0]?arr[0]:0; 
 //         //  {resultado = resultado - arr[index]}
 //          {resultado -= arr[index]}
 //         }
-//     else if(op=='*'){resultado = arr[0]; for (let index = 1; index < arr.length; index++)
+//     else if(op=='*'){resultado = 1; 
 //         //  {resultado = resultado * arr[index]}
 //          {resultado *= arr[index]}
 //         }
-//     else if(op=='/'){resultado = arr[0]; for (let index = 1; index < arr.length; index++) 
+//     else if(op=='/'){resultado = arr && arr[0]?arr[0]:0;  
 //         {if (arr[index] == 0) {resultado = 0;}
 //         //  {resultado = resultado / arr[index]}
 //         else {resultado /= arr[index]}
 //         }
 //     }
+//     for (let index = 0; index < arr.length; index++)
+//         {resultado =  operarNumeros(resultado, arr[index], op)
+        
+//         }
+        
+
+    
     
 //     return resultado;
 // }
 
-// console.log(operarNumArray([1,1,1,1], '+'));
+function opNumArr(arr, op) {
+    let resultado;
+    let idx_inicio=0
+ 
+    if (op == '+'){
+          resultado = 0;
+        }
+    else if (op == '-'){
+          resultado = (arr && arr[0])?arr[0]:0; idx_inicio= 1;
+        }
+    else if (op == '*'){
+         resultado = 1;
+        }
+    else if (op == '/'){
+         resultado = (arr && arr[0])?arr[0]:0; idx_inicio = 1;
+        }
+ 
+    for (let i = idx_inicio; i < arr.length; i++) {
+        // otra manera de solucionar el problema usando el for en vez del if
+        // if((op == '-' || op == '/') && i == 0) resultado = arr[0];
+        resultado = operarNumeros(resultado , arr[i],op);
+    }
+ 
+    return resultado;
+ }
+
+console.log(opNumArr([2,1,1,1], '*'));
+
+
+// console.log(operarNumArr([1,1,1,1,2], '+'));
+// console.log(operarNumArr([1,1,1,1,2], '-'));
+// console.log(operarNumArr([1,1,1,1,2], '*'));
+// console.log(operarNumArr([1,1,1,1,2], '/'));
+
+
 

@@ -1,0 +1,30 @@
+body{background-color: aliceblue}
+
+h1 {text-align: center}
+
+li{width: 90%; 
+    margin: 0 auto;
+}
+
+button{width: 100%; 
+    margin: 0 auto;
+}
+
+span{box-align: right; display: inline-block;}
+
+ul > li {list-style: none;
+    border: 5px solid lightblue;
+    margin: 5px}
+
+ul > li > * {display: inline-block;}
+
+ul > li > div > img{width: 100px; 
+    display: inline-block;}
+
+.saluda{background: mediumturquoise;
+    border-radius: 5px;
+    color: white}
+
+.borrar{background: tomato;
+    border-radius: 5px;
+    color: white}

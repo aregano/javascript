@@ -15,63 +15,43 @@ let notas = [
 
 ]
 
-function generate Structure(arrNotes,divN) {
-    let finalHTML = '';
-
-    arrNotes.forEach(element => {
-        finalHTML += element.tono
-    });
-}
 
 
-
-function parseaNotas(paramNotas){
+function parseaNotas(paramNotas) {
 
     let piano = document.getElementById('piano')
 
+    let finalHTML = ''
+
     for (let index = 0; index < paramNotas.length; index++) {
-        piano.innerHTML += 
-        `<div class="${notas[index].tono}" id="${notas[index].nombre}">
-        <audio src="${notas[index].sonido}"></audio></div>`
+        piano.innerHTML += `
+            <div data-audio="a${index}" class="nota ${notas[index].tono}" id="${notas[index].nombre}">
+            <audio id="a${index}" src="${notas[index].sonido}"></audio></div>
+        `;
     }
 }
 
-parseaNotas(notas)
+parseaNotas(notas);
 
-for (let index = 0; index < notas.length; index++) {
-    notas[index].onclick = function () {
-        player.src = this.getAttribute('src');
-        player.play();
-        audio.play();
-        
-    }
-    
+
+
+function tocarNota() {
+
+    let tocarNota = document.getElementsByClassName('nota');
+
+    for (let index = 0; index < tocarNota.length; index++) {
+
+        tocarNota[index].onclick = function() {
+            let idAudio=  this.getAttribute('data-audio');
+            document.getElementById(idAudio).play();
+
+        };
+
+    };
 }
 
+tocarNota();
 
 
 
-// function generateStructure(arrNotes, divN) {
-//     let finalHtml = '';
- 
-//     arrNotes.forEach(element => {
-//         finalHtml += element.tono ? `<div class="note" data-snd="${element.sonido}"></div>` : `<div class="note semi" data-snd="${element.sonido}"></div>`;
-//     });
- 
-//     document.getElementById(divN).innerHTML = finalHtml;
-//     associateAndPlayNotes();
-//  }
- 
-//  function associateAndPlayNotes() {
-//     let player = document.getElementById('player');
- 
-//     document.querySelectorAll('.note').forEach(element => {
-//         element.onclick = function () {
-//             player.src = this.getAttribute('data-snd');
-//             player.play();
-//         }
-//     });
- 
-//  }
- 
-//  generateStructure(notas, 'piano');
+
