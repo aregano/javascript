@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+
+    <h1>Accede</h1>
+    <section>
+        <div id="mensaje" class="error esconder">Ana ya puedes hablar :)</div>
+        <form action="" id="loginForm" method="POST">
+            <div><input id="username" type="text" placeholder="Username" minlength="3" required></div>
+            <div id="errorUsername" class="error esconder">Completa el Username con el formato correcto</div>
+            <div><input id="password" type="password" placeholder="Password" pattern="[a-zA-Z0-9]*" required></div>
+            <div id="errorPassword" class="error esconder">Completa el Password con el formato correcto</div>
+            <button id="accederBtn">Acceder</button>
+        </form>
+    </section>
+
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="./script.js"></script>
+
+</html>
